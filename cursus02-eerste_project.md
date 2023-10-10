@@ -40,11 +40,11 @@ Het App.vue-bestand is meestal het belangrijkste Vue-bestand in een Vue.js-toepa
 
 Laten we de structuur van dit App.vue-bestand uitleggen:
 
-`<template>`: Dit gedeelte bevat de HTML-structuur van de applicatie. Hierin kun je de lay-out van je applicatie definiëren. In dit voorbeeld is er een header, een hoofdgedeelte en een footer.
+- `<template>`: Dit gedeelte bevat de HTML-structuur van de applicatie. Hierin kun je de lay-out van je applicatie definiëren. In dit voorbeeld is er een header, een hoofdgedeelte en een footer.
 
-`<script>`: Dit gedeelte bevat de JavaScript-logica voor de `App`-component. In dit geval wordt de component geëxporteerd met de naam 'App'. Je kunt hier ook andere logica toevoegen die betrekking heeft op de root van je applicatie.
+- `<script>`: Dit gedeelte bevat de JavaScript-logica voor de `App`-component. In dit geval wordt de component geëxporteerd met de naam 'App'. Je kunt hier ook andere logica toevoegen die betrekking heeft op de root van je applicatie.
 
-`<style>`: Dit gedeelte bevat CSS-stijlen die van toepassing zijn op de hele applicatie. Deze stijlen zijn van toepassing op elementen binnen de `App`-component. Je kunt hier globale stijlen voor je applicatie definiëren.
+- `<style>`: Dit gedeelte bevat CSS-stijlen die van toepassing zijn op de hele applicatie. Deze stijlen zijn van toepassing op elementen binnen de `App`-component. Je kunt hier globale stijlen voor je applicatie definiëren.
 
 Het `App.vue`-bestand is vaak het startpunt van een Vue.js-toepassing en wordt gebruikt om andere componenten op te roepen. Het bevat ook algemene stijlinstellingen voor de hele toepassing.
 
@@ -112,7 +112,6 @@ Je ziet dat alles wat je in het input-veld typt, ook meteen getoond wordt in de 
 
 - Hoe zou je dit gedaan hebben zonder Vue.js?
 - Wat is nog handig om op deze manier data te tonen?
-
 - We gaan ook nog een knop toevoegen die de naam terug op 'Martijn' zet:
 
 ```html
@@ -242,4 +241,3 @@ export default {
 ```
 
 In dit voorbeeld zal de eerste `p` worden weergegeven als showMessage waar is, en de tweede `p` wordt weergegeven als showMessage niet waar is.
-
