@@ -29,6 +29,7 @@ Om te kunnen werken met Vue.js moeten we gebruik maken van Node.js en moeten we 
    node -v
    npm -v
    ```
+   Als alles goed is verlopen, zou je de versienummers van Node.js en npm moeten zien.
 
 ### Installeren van Vue CLI
 
@@ -50,23 +51,23 @@ Volg deze stappen:
     npm create vue@latest
     ```
 
-2.  Nadat je het commando hebt uitgevoerd, zal Vue CLI je vragen om een _naam_ te kiezen voor je project. Deze naam mag geen hoofdletters bevatten en mag geen spaties bevatten en zal gebruikt worden als naam voor de map waarin je project wordt aangemaakt. Je kunt ook een punt (.) gebruiken om het project in de huidige map aan te maken zonder eerst een submap te maken.
+2.  Nadat je het commando hebt uitgevoerd, zal Vue CLI je vragen om een `naam` te kiezen voor je project. Deze naam mag geen hoofdletters bevatten en mag geen spaties bevatten en zal gebruikt worden als naam voor de map waarin je project wordt aangemaakt. Je kunt ook een punt `.` gebruiken om het project in de huidige map aan te maken zonder eerst een submap te maken.
     Nadat je een naam hebt gekozen, zal Vue CLI je vragen om een aantal opties te kiezen. We kiezen voor elke optie die ons voorgeschoteld wordt 'No' of drukken gewoon op 'Enter'.
 
-        ```bash
-        ✔ Project name: project-naam
-        ✔ Add TypeScript? … No / Yes
-        ✔ Add JSX Support? … No / Yes
-        ✔ Add Vue Router for Single Page Application development? … No / Yes
-        ✔ Add Pinia for state management? … No / Yes
-        ✔ Add Vitest for Unit testing? … No / Yes
-        ✔ Add an End-to-End Testing Solution? … No / Cypress / Playwright
-        ✔ Add ESLint for code quality? … No / Yes
-        ✔ Add Prettier for code formatting? … No / Yes
+    ```bash
+    ✔ Project name: project-naam
+    ✔ Add TypeScript? … No / Yes
+    ✔ Add JSX Support? … No / Yes
+    ✔ Add Vue Router for Single Page Application development? … No / Yes
+    ✔ Add Pinia for state management? … No / Yes
+    ✔ Add Vitest for Unit testing? … No / Yes
+    ✔ Add an End-to-End Testing Solution? … No / Cypress / Playwright
+    ✔ Add ESLint for code quality? … No / Yes
+    ✔ Add Prettier for code formatting? … No / Yes
 
-        Scaffolding project in ./project-naam
-        Done.
-        ```
+    Scaffolding project in ./project-naam
+    Done.
+    ```
 
 3.  Het project staat nu klaar in de map `project-naam`. We moeten enkel nog de dependencies (de benodigde node_modules) installeren. Let op, je moet wel eerst navigeren naar de map `project-naam`!
 
@@ -91,4 +92,48 @@ Volg deze stappen:
     npm run dev
     ```
 
-    Als alles tot hiertoe goed verlopen is, kan je nu surfen naar http://localhost:5173/.
+    Als alles tot hiertoe goed verlopen is, kan je nu surfen naar http://localhost:5173/ en zou je de standaard Vue 3-pagina moeten zien.
+
+## Vue 3 project structuur
+
+Een Vue.js 3-project heeft doorgaans een specifieke projectstructuur die is georganiseerd rond de Vue-cli (Vue Command Line Interface) en de aanbevolen bestandsindeling. Hier is een algemene projectstructuur voor een Vue.js 3-project:
+
+```bash
+project-naam/
+|-- node_modules/          # Hier worden alle afhankelijkheden geïnstalleerd
+|-- public/                # Openbare bestanden (toegankelijk via de browser)
+|   |-- index.html         # Hoofd-HTML-bestand
+|-- src/                   # Broncode van je Vue.js-applicatie
+|   |-- assets/            # Statische bestanden zoals afbeeldingen en stijlen
+|   |-- components/        # Vue-componenten
+|   |-- views/             # Vue-weergaven of pagina's
+|   |-- App.vue            # Hoofd Vue-component
+|   |-- main.js            # Ingangspunt van je applicatie
+|-- .gitignore             # Git-ignore-bestand om bestanden/ mappen uit te sluiten van versiebeheer
+|-- package.json           # NPM-pakketconfiguratie
+|-- README.md              # Documentatie voor je project
+|-- vite.config.js         # Vue-cli configuratiebestand
+|-- ...                    # Andere bestanden
+```
+
+Hier is een beknopte uitleg van de belangrijkste mappen en bestanden:
+
+- **node_modules:** Hier worden alle projectafhankelijkheden opgeslagen na het uitvoeren van npm install.
+
+- **public:** Dit is de map voor openbare bestanden die direct toegankelijk zijn via de browser, zoals favicon.ico
+
+- **src:** Dit is waar je de broncode van je Vue.js-applicatie plaatst. Dit omvat componenten, weergaven, stijlen, enz.
+
+  - **assets:** Hier kun je statische bestanden zoals afbeeldingen, pictogrammen en stijlen opslaan die worden gebruikt in je app.
+
+  - **components:** Hier kan je herbruikbare Vue-componenten plaatsen die in je applicatie worden gebruikt.
+
+  - **views:** Dit is waar je de Vue-weergaven of pagina's plaatst die corresponderen met verschillende routes in je app (later)
+
+  - **App.vue**: Het hoofdcomponent van je applicatie waarin je de router (later) en de lay-out van je app definieert.
+
+  - **main.js**: Het ingangspunt van je applicatie waarin je Vue initialisatie en andere configuratie kunt doen.
+
+- **index.html:** Dit is het hoofd-HTML-bestand van je applicatie. Het bevat een `<div id="app">` waarin je Vue-app wordt gemonteerd.
+
+- **andere bestanden:** Er zijn ook andere bestanden zoals package.json, vite.config.js, enz. die worden gebruikt voor het configureren van je Vue.js-applicatie.
