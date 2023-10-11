@@ -231,7 +231,7 @@ Hier is een voorbeeld in Vue.js:
 
 <script>
 export default {
-  data() {
+  setup() {
     return {
       showMessage: true // Verander dit om te testen
     };
