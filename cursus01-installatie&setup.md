@@ -31,14 +31,6 @@ Om te kunnen werken met Vue.js moeten we gebruik maken van Node.js en moeten we 
    ```
    Als alles goed is verlopen, zou je de versienummers van Node.js en npm moeten zien.
 
-### Installeren van Vue CLI
-
-Als je Vue CLI (Command Line Interface) nog niet op je systeem hebt geïnstalleerd, dan moet je dit eerst, éénmalig, doen met het volgende npm-commando in je terminal:
-
-```bash
-npm install -g @vue/cli
-```
-
 ## Een Leeg Vue 3-project aanmaken
 
 Om een leeg Vue 3-project aan te maken, kun je de Vue CLI (Command Line Interface) gebruiken.
